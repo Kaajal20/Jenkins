@@ -20,7 +20,7 @@ pipeline {
             steps {
                 nexusArtifactUploader artifacts: [[artifactId: 'Maven', 
                                                    classifier: '', 
-                                                   file: 'target/Maven-0.0.1-SNAPSHOT.jar', 
+                                                   file: 'target/Maven-0.0.2-SNAPSHOT.jar', 
                                                    type: 'jar'
                                                   ]
                                                  ], 
