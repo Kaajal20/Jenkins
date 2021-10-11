@@ -30,7 +30,7 @@ pipeline {
                     nexusVersion: 'nexus3', 
                     protocol: 'http', 
                     repository: 'jenkins-snapshots', 
-                    version: '0.0.1-SNAPSHOT'
+                    version: '0.0.2-SNAPSHOT'
             }
         }
                 stage('SonarQube Stage') {
