@@ -18,19 +18,7 @@ pipeline {
         }
         stage("Deploy") {
             steps {
-                nexusArtifactUploader artifacts: [[artifactId: 'Maven', 
-                                                   classifier: '', 
-                                                   file: 'target/Maven-0.0.2-SNAPSHOT.jar', 
-                                                   type: 'jar'
-                                                  ]
-                                                 ], 
-                    credentialsId: 'dd59719f-8d10-4fa9-a0be-425bcd8b6318',
-                    groupId: 'Jenkins', 
-                    nexusUrl: 'localhost:8081', 
-                    nexusVersion: 'nexus3', 
-                    protocol: 'http', 
-                    repository: 'jenkins-snapshots', 
-                    version: '0.0.2-SNAPSHOT'
+                bat "mvn deploy"
             }
         }
                 stage('SonarQube Stage') {
